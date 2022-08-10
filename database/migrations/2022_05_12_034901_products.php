@@ -18,7 +18,7 @@ class Products extends Migration
             $table->id();
             $table->string('nameproduct');
             $table->string("stoct");
-            $table->integer("price");
+            $table->double("price")->default(round(microtime(true) * 1000));
             $table->timestamps();
         });
     }

@@ -42,7 +42,7 @@ class ProductCrudController extends CrudController
         // CRUD::column('id');
         CRUD::column('nameproduct');
         CRUD::column('stoct');
-        CRUD::column('price');
+        CRUD::column('price')->label("Date")->time('price')->type('datatime')->format('l j F Y H:i:s');
         // CRUD::column('created_at');
         // CRUD::column('updated_at');
 
@@ -66,7 +66,7 @@ class ProductCrudController extends CrudController
         // CRUD::field('id');
         CRUD::field('nameproduct');
         CRUD::field('stoct');
-        CRUD::field('price');
+        // CRUD::field('price')->default(round(microtime(true) * 1000));
         // CRUD::field('created_at');
         // CRUD::field('updated_at');
 
